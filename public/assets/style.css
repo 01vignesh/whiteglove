@@ -1,0 +1,206 @@
+:root {
+    --wg-ink: #1f2937;
+    --wg-muted: #6b7280;
+    --wg-bg: #f8fafc;
+    --wg-card: #ffffff;
+    --wg-primary: #0f4c5c;
+    --wg-secondary: #2a9d8f;
+    --wg-accent: #e36414;
+    --wg-soft: #eef6f7;
+    --wg-border: #e5e7eb;
+}
+
+body {
+    color: var(--wg-ink);
+    background:
+        radial-gradient(circle at 0% 0%, #fef4ea 0, transparent 35%),
+        radial-gradient(circle at 100% 0%, #e8f5f2 0, transparent 35%),
+        var(--wg-bg);
+    min-height: 100vh;
+}
+
+.wg-navbar {
+    background: linear-gradient(120deg, var(--wg-primary), #1f6f78);
+}
+
+.wg-navbar .navbar-brand,
+.wg-navbar .nav-link {
+    color: #fff !important;
+}
+
+.wg-hero {
+    background: linear-gradient(135deg, var(--wg-primary), var(--wg-secondary));
+    color: #fff;
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(15, 76, 92, 0.2);
+}
+
+.wg-card {
+    border: 1px solid var(--wg-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+}
+
+.wg-card .card-title {
+    color: var(--wg-ink);
+    font-weight: 600;
+}
+
+.wg-metric {
+    font-size: 1.8rem;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.wg-badge {
+    border-radius: 999px;
+    padding: .32rem .6rem;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.status-pending { background: #fff7ed; color: #9a3412; }
+.status-approved { background: #ecfdf5; color: #065f46; }
+.status-rejected { background: #fef2f2; color: #991b1b; }
+.status-completed { background: #e0f2fe; color: #075985; }
+.status-cancelled { background: #f3f4f6; color: #374151; }
+.status-open { background: #eef2ff; color: #3730a3; }
+
+.wg-timeline {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: .75rem;
+}
+
+.wg-step {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--wg-border);
+    border-radius: 12px;
+    padding: .75rem;
+    text-align: center;
+    font-size: .85rem;
+    color: var(--wg-muted);
+}
+
+.wg-step.active {
+    border-color: var(--wg-secondary);
+    background: var(--wg-soft);
+    color: var(--wg-ink);
+    font-weight: 600;
+}
+
+.wg-section-title {
+    font-weight: 700;
+    letter-spacing: .01em;
+}
+
+.wg-subtitle {
+    color: var(--wg-muted);
+    font-size: .95rem;
+}
+
+.wg-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.wg-kpi-label {
+    color: var(--wg-muted);
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.wg-chip {
+    display: inline-block;
+    border: 1px solid var(--wg-border);
+    border-radius: 999px;
+    padding: .2rem .55rem;
+    font-size: .76rem;
+    color: var(--wg-muted);
+    background: #fff;
+}
+
+.wg-progress {
+    height: 10px;
+    border-radius: 999px;
+    background: #e5e7eb;
+    overflow: hidden;
+}
+
+.wg-progress > span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--wg-secondary), #66c2a5);
+}
+
+.wg-stack > * + * {
+    margin-top: .75rem;
+}
+
+.table thead th {
+    font-size: .82rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: var(--wg-muted);
+}
+
+.wg-thumb {
+    width: 86px;
+    height: 56px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid var(--wg-border);
+    display: block;
+    flex: 0 0 auto;
+}
+
+.wg-thumb-placeholder {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--wg-muted);
+    font-size: .72rem;
+    background: #f7fafc;
+}
+
+.wg-service-cell {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    min-width: 220px;
+}
+
+.wg-service-title {
+    font-weight: 600;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+@media (max-width: 991px) {
+    .wg-timeline {
+        grid-template-columns: 1fr;
+    }
+    .wg-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.wg-page-footer {
+    border-top: 1px solid var(--wg-border);
+    background: #ffffff;
+    color: var(--wg-muted);
+    font-size: .85rem;
+    padding: .9rem 0;
+    margin-top: 1rem;
+}
+
+.wg-page-footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: .75rem;
+    flex-wrap: wrap;
+}

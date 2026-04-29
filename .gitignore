@@ -1,0 +1,43 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Composer
+vendor/
+composer.phar
+
+# Node (if used for tooling later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime / temp
+tmp/
+temp/
+cache/
+
+# User uploads (keep directories, ignore files)
+public/uploads/clients/*
+public/uploads/providers/*
+public/uploads/admins/*
+!public/uploads/clients/.gitkeep
+!public/uploads/providers/.gitkeep
+!public/uploads/admins/.gitkeep
+
