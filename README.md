@@ -16,9 +16,9 @@ WhiteGlove is a PHP + MySQL academic project for end-to-end event management wit
 
 ## Tech Stack
 
-- Frontend: HTML, CSS, Bootstrap 5
-- Backend: PHP 8+ (PDO)
-- Database: MySQL 8+
+- Frontend: HTML, CSS, Bootstrap
+- Backend: PHP
+- Database: MySQL
 
 ## Project Structure
 
@@ -39,32 +39,12 @@ WhiteGlove/
 
 1. Create a MySQL database named `whiteglove`.
 2. Import [`database/schema.sql`](./database/schema.sql).
-3. (Optional but recommended for viva) Import [`database/seed_demo.sql`](./database/seed_demo.sql).
-4. Update DB credentials in [`app/config.php`](./app/config.php) or set env vars (`DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASS`, optional `DB_CHARSET`).
-5. Open `http://localhost/WhiteGlove/public/`.
-
-## Deploy on Render (Docker)
-
-1. Push this repo to GitHub.
-2. In Render: `New` -> `Web Service` -> connect repo.
-3. Render will detect [`Dockerfile`](./Dockerfile). Use default Docker deploy.
-4. Add environment variables in Render:
-   - `DB_HOST`
-   - `DB_PORT`
-   - `DB_NAME`
-   - `DB_USER`
-   - `DB_PASS`
-   - Optional: `DB_CHARSET` (default `utf8mb4`)
-5. Provision an external MySQL database (Render does not provide native MySQL managed DB in all plans/regions) and use its credentials above.
-6. Import DB:
-   - Run [`database/schema.sql`](./database/schema.sql)
-   - Optional seed: [`database/seed_demo.sql`](./database/seed_demo.sql)
-7. Deploy and open your Render service URL.
-
-Notes:
-- `public/` is configured as web root in the Docker image.
-- Upload folders are created automatically in container (`public/uploads/...`).
-- For production-grade persistence of uploads, move images to object storage (S3/Cloudinary).
+3. Import [`database/seed_demo.sql`](./database/seed_demo.sql).
+4. Import [`database/seed_dump_realistic.sql`](./database/seed_dump_realistic.sql).
+5. Import [`database/seed_dump_premium.sql`](./database/seed_dump_premium.sql).
+6. Create Client Account
+7. Update DB credentials in [`app/config.php`](./app/config.php) or set env vars (`DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASS`, optional `DB_CHARSET`).
+8. Open `http://localhost/WhiteGlove/public/`.
 
 ## Notes
 
@@ -106,8 +86,6 @@ Notes:
 - Admin Analytics Center: `http://localhost/WhiteGlove/public/admin_analytics.php`
 - Client Experience Hub (redirects to Client Hub): `http://localhost/WhiteGlove/public/client_experience.php`
 - Provider Workbench: `http://localhost/WhiteGlove/public/provider_workbench.php`
-
-You can create users for all three roles directly from the register page.
 
 ## Demo Credentials (after seed import)
 
